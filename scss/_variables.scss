@@ -1,6 +1,12 @@
 //Colors
 
-$gradient-primary: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$gradient-primary: linear-gradient(
+  135deg,
+  hsl(236, 72%, 79%),
+  hsl(237, 63%, 64%)
+);
+
+$color-hover: hsl(236, 72%, 79%);
 
 $color-very-light: hsl(240, 78%, 98%); //very light grayish blue
 $color-light: hsl(234, 14%, 74%); //light greyish blue
