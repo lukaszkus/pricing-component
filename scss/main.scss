@@ -11,25 +11,30 @@
 html {
   font-size: 15px;
   font-family: $font-main;
+  width: 100%;
+  height: 100vh;
 }
 
 body {
-  width: 100%;
-  height: 100%;
   padding: 1.333rem;
   background-color: $color-very-light;
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: top -40px right -195px;
   @include desktop {
-    background-position: top right;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right, left bottom;
   }
 }
 
 .header {
   width: 100%;
   height: 100%;
-  padding: 3rem 0 5rem 0;
+  padding: 3.2rem 0 5.5rem 0;
+  @include desktop {
+    padding: 3.5rem 0 4.2rem 0;
+  }
   &__title {
     font-size: 2rem;
     color: $color-grayish;
@@ -95,25 +100,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @include desktop {
     flex-direction: row;
     justify-content: center;
   }
   .box {
-    width: 23.333rem;
+    width: 22.333rem;
     text-align: center;
     background-color: $color-box-bg;
     border-radius: 0.667rem;
-    padding: 2.333rem 2rem 2rem 2rem;
+    padding: 0 2rem;
     margin-bottom: 2.333rem;
     color: $color-grayish;
     box-shadow: 0.5rem 2rem 2rem rgba($color-hover, 0.2);
     &--accent {
       background: $gradient-primary;
       color: $color-box-bg;
+      @include desktop {
+        padding: 1.5rem 2rem;
+      }
     }
     &__title {
       font-size: 1.2rem;
+      padding-top: 2.333rem;
     }
     &__price {
       display: flex;
@@ -121,7 +131,7 @@ body {
       align-items: center;
       font-size: 4.8rem;
       color: $color-grayish-dark;
-      padding: 1.5rem 0;
+      padding: 1.2rem 0 1.6rem 0;
       span {
         font-size: 2.5rem;
         padding-right: 0.333rem;
@@ -149,6 +159,7 @@ body {
       background: $gradient-primary;
       border-radius: 0.5rem;
       padding: 1rem;
+      margin-bottom: 2rem;
       &:hover {
         background: transparent;
         outline: 0.133rem solid $color-grayish;
@@ -162,6 +173,16 @@ body {
           outline: 0.133rem solid $color-box-bg;
           color: $color-box-bg;
         }
+      }
+    }
+    &:first-child {
+      @include desktop {
+        border-radius: 0.667rem 0 0 0.667rem;
+      }
+    }
+    &:last-child {
+      @include desktop {
+        border-radius: 0 0.667rem 0.667rem 0;
       }
     }
   }

@@ -8,27 +8,34 @@
 html {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
 }
 
 body {
-  width: 100%;
-  height: 100%;
   padding: 1.333rem;
   background-color: #f6f6fe;
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: top -40px right -195px;
 }
-@media (min-width: 1050px) {
+@media (min-width: 68.125rem) {
   body {
-    background-position: top right;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right, left bottom;
   }
 }
 
 .header {
   width: 100%;
   height: 100%;
-  padding: 3rem 0 5rem 0;
+  padding: 3.2rem 0 5.5rem 0;
+}
+@media (min-width: 68.125rem) {
+  .header {
+    padding: 3.5rem 0 4.2rem 0;
+  }
 }
 .header__title {
   font-size: 2rem;
@@ -90,18 +97,18 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 1050px) {
+@media (min-width: 68.125rem) {
   .main {
     flex-direction: row;
     justify-content: center;
   }
 }
 .main .box {
-  width: 23.333rem;
+  width: 22.333rem;
   text-align: center;
   background-color: #fff;
   border-radius: 0.667rem;
-  padding: 2.333rem 2rem 2rem 2rem;
+  padding: 0 2rem;
   margin-bottom: 2.333rem;
   color: #6d708d;
   box-shadow: 0.5rem 2rem 2rem rgba(163, 168, 240, 0.2);
@@ -110,8 +117,14 @@ body {
   background: linear-gradient(135deg, #a3a8f0, #696fdd);
   color: #fff;
 }
+@media (min-width: 68.125rem) {
+  .main .box--accent {
+    padding: 1.5rem 2rem;
+  }
+}
 .main .box__title {
   font-size: 1.2rem;
+  padding-top: 2.333rem;
 }
 .main .box__price {
   display: flex;
@@ -119,7 +132,7 @@ body {
   align-items: center;
   font-size: 4.8rem;
   color: #494c5f;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0 1.6rem 0;
 }
 .main .box__price span {
   font-size: 2.5rem;
@@ -147,6 +160,7 @@ body {
   background: linear-gradient(135deg, #a3a8f0, #696fdd);
   border-radius: 0.5rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 .main .box__link:hover {
   background: transparent;
@@ -161,6 +175,16 @@ body {
   background: transparent;
   outline: 0.133rem solid #fff;
   color: #fff;
+}
+@media (min-width: 68.125rem) {
+  .main .box:first-child {
+    border-radius: 0.667rem 0 0 0.667rem;
+  }
+}
+@media (min-width: 68.125rem) {
+  .main .box:last-child {
+    border-radius: 0 0.667rem 0.667rem 0;
+  }
 }
 
 .attribution {
