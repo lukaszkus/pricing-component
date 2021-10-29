@@ -18,7 +18,9 @@ html {
 body {
   padding: 1.333rem;
   background-color: $color-very-light;
-  // background: url(../images/bg-top.svg) no-repeat;
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top -40px right -195px;
 }
 
 .header {
@@ -83,5 +85,86 @@ body {
     p {
       color: $color-light;
     }
+  }
+}
+
+.main {
+  .box {
+    text-align: center;
+    background-color: $color-box-bg;
+    border-radius: 0.667rem;
+    padding: 2.333rem 2rem 2rem 2rem;
+    margin-bottom: 2.333rem;
+    color: $color-grayish;
+    box-shadow: 0.5rem 2rem 2rem rgba($color-hover, 0.2);
+    &--accent {
+      background: $gradient-primary;
+      color: $color-box-bg;
+    }
+    &__title {
+      font-size: 1.2rem;
+    }
+    &__price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4.8rem;
+      color: $color-grayish-dark;
+      padding: 1.5rem 0;
+      span {
+        font-size: 2.5rem;
+        padding-right: 0.333rem;
+      }
+      &--accent {
+        color: $color-box-bg;
+      }
+    }
+    &__list {
+      list-style: none;
+      border-top: 0.067rem solid $color-light;
+      padding-bottom: 2.1rem;
+      li {
+        padding: 1.1rem 0;
+        border-bottom: 0.067rem solid $color-light;
+      }
+    }
+    &__link {
+      font-size: 0.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.133rem;
+      display: block;
+      color: $color-box-bg;
+      background: $gradient-primary;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      &:hover {
+        background: transparent;
+        outline: 0.133rem solid $color-grayish;
+        color: $color-link;
+      }
+      &--accent {
+        background: $color-box-bg;
+        color: $color-link;
+        &:hover {
+          background: transparent;
+          outline: 0.133rem solid $color-box-bg;
+          color: $color-box-bg;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+  color: $color-light;
+  a {
+    color: $color-light;
+  }
+  a:hover {
+    color: $color-grayish;
   }
 }
