@@ -11,6 +11,7 @@
 html {
   font-size: 15px;
   font-family: $font-main;
+  font-weight: 700;
   width: 100%;
   height: 100vh;
 }
@@ -191,6 +192,7 @@ body {
 .attribution {
   text-align: center;
   font-size: 0.7rem;
+  font-weight: 300;
   padding: 1rem;
   color: $color-light;
   a {
