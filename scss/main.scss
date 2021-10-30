@@ -22,10 +22,19 @@ body {
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: top -40px right -195px;
+  position: relative;
   @include desktop {
-    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
-    background-repeat: no-repeat no-repeat;
-    background-position: top right, left bottom;
+    background-image: url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    &::before {
+      content: url(../images/bg-bottom.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
   }
 }
 
